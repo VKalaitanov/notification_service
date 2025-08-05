@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notification Status</title>
+    <style>
+        body { font-family: Arial; padding: 30px; background-color: #eaf7ea; }
+        .container { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .status { font-size: 18px; color: #155724; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Notification Queued</h1>
+        <p class="status">Status: {{ notification.status }}</p>
+        <p>Created At: {{ notification.created_at }}</p>
+        {% if notification.sent_at %}
+            <p>Sent At: {{ notification.sent_at }}</p>
+        {% endif %}
+        {% if notification.successful_channel %}
+            <p>Successful Channel: {{ notification.successful_channel }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
