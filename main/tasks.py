@@ -33,3 +33,4 @@ def send_notification_task(notification_id):
 
     notification.attempt_logs = attempt_logs
     notification.save()
+
